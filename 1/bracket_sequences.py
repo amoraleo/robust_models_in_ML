@@ -45,7 +45,10 @@ def check(string): #without using regular expressions(2nd solution)
         return False
 
 
-string = input()
+string = input("Enter the string: ")
 
+print("1st solution:")
 print(check_regex(string))
+
+print("2nd solution:")
 print(check(string))
