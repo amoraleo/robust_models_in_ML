@@ -17,12 +17,10 @@ for num, freq in num_dict.items():
 result = []
 
 for i in range(len(nums), 0, -1):
-    if len(result) >= k:
-        break
     if i in freq_dict:
-        #if len(freq_dict[i]) + len(result) > k:
-            #result += freq_dict[i][:k-len(result)]
-            #break
+        if len(freq_dict[i]) + len(result) >= k:
+            result += freq_dict[i][:k-len(result)]
+            break
         result += freq_dict[i]
 
 print(result)
